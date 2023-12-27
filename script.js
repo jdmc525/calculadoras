@@ -90,9 +90,10 @@ function equal(validation){
         case 1:
 
             result.innerText = num1 + num2; 
-            eraseAll_notResult();
+            eraseAll_notResult();  
+            maxText();
             result.classList.remove('hide')    
-
+            
             break;
     
         case 2:
@@ -169,4 +170,15 @@ function eraseAll_notResult(){
 }
 
 
+/*
 
+Posible solucion para el limite
+
+let maxCharacter = 17;
+let result1 = ""; 
+function maxText(element) {
+    if (element.length > maxCharacter) {
+        element.innerText =  element.substr(0,10);
+    }
+}
+*/
