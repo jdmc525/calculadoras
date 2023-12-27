@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section class="simple-calc_welcome-main">
+    <h2>Calculadora Simple</h2>
+    <p>Bienvenido, usa la calculadora para calcular operaciones matematicas simples haciendo click en los iconos correspondientes</p>
+    </section>    
+    
+    <div class="simple-calc_container-main">
+        
+        <div class="simple-calc_container-screen">
+            <div class="screen-top">
+                <p class="simple-calc_screen-before"></p>
+                <p class="simple-calc_screen-sign"></p>
+                <p class="simple-calc_screen-after"></p>
+            </div>
+            <p class="simple-calc_screen-result"></p> 
+        </div>
+        
+    <div class="simple-calc_container-secondary">
+        <div class="simple-calc_container-left">
+            <div class="simple-calc_container-misc">
+                <div><p>math is cool</p></div>
+                <button class="clear-everything green_circle" onclick="eraseAll()" >CE</button>
+            </div>
+            
+            <div class="simple-calc_container-numbers">
+                    <button class="number-1 green_circle" onclick="display_element(event1, 1)">1</button>
+                    <button class="number-2 green_circle" onclick="display_element(event2, 2)" >2</button>
+                    <button class="number-3 green_circle" onclick="display_element(event3, 3)" >3</button>
+                    <button class="number-4 green_circle" onclick="display_element(event4, 4)" >4</button>
+                    <button class="number-5 green_circle" onclick="display_element(event5, 5)" >5</button>
+                    <button class="number-6 green_circle" onclick="display_element(event6, 6)" >6</button>
+                    <button class="number-7 green_circle" onclick="display_element(event7, 7)" >7</button>
+                    <button class="number-8 green_circle" onclick="display_element(event8, 8)" >8</button>
+                    <button class="number-9 green_circle" onclick="display_element(event9, 9)" >9</button>
+                    <button class="percentage-symb green_circle" onclick="display_element(eventPercentage, percentage)" >%</button>
+                    <button class="number-0 green_circle" onclick="display_element(event0, 0)">0</button>
+                    <button class="dot-symb green_circle" onclick="display_element(eventDot, dot)">.</button>
+                </div>
+        </div>    
+        <div class="simple-calc_container-operation">
+            <button class="plus-sign yellow_circle" onclick="display_element(eventPlus, plus)  , sumValidation()">+</button>
+            <button class="minus-sign yellow_circle" onclick="display_element(eventMinus, minus), restValidation()">-</button>
+            <button class="multip-sign yellow_circle" onclick="display_element(eventMultip, multip), multipValidation()">x</button>
+            <button class="divide-sign yellow_circle" onclick="display_element(eventDiv, division), diviValidation()">/</button>
+            <button class="equal-sign blue_circle" onclick="equal(validation)"  >=</button>
+        </div>
+    </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
+
+
+

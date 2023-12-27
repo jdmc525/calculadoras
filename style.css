@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    background-color: rgb(24, 24, 24);
+}
+
+
+
+
+
+/*DESCRIPCION*/
+
+.simple-calc_welcome-main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px auto;
+    flex-direction: column;
+    max-width: 691px;
+    min-height: 117px;
+    border-radius: 58.5px;
+    border: 1px solid #FFF;
+    background: rgba(224, 35, 35, 0.91);
+}
+
+.simple-calc_welcome-main h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin:  0px;
+}
+
+.simple-calc_welcome-main p{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    max-width: 650px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/*FONDO CALC*/
+
+
+.simple-calc_container-main{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 302px;
+    height: 494px;
+    border-radius: 40px;
+    border: 2px solid #FF4005;
+    background: #D9D9D9;
+    margin-top: 20px;
+    padding: 7px 10px 20px 10px;
+}
+
+
+/*Pantalla*/
+.hide{
+    display: none;
+}
+
+.simple-calc_container-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+    width: 284px;
+    min-height: 112px;
+    border-radius: 65px;
+    background: rgba(141, 140, 140, 0.61);
+    margin-top: 10px ;
+}
+
+.simple-calc_screen-result{
+    margin: 0px 0px 5px 0px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+
+
+.simple-calc_container-screen{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter; 
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.screen-top{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    max-width:280px ;
+    margin: 0px;
+    padding: 0px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.screen-top p{
+    margin: 0;
+    padding-left: 5px;
+    max-width: 284px;
+    flex-wrap: wrap;
+    
+}
+
+
+/*ESTILOS DE CIRCULOS 
+
+NUMEROS = VERDE
+SIMBOLOS = AMARILLO
+IGUAL= AZUL
+
+*/
+
+.green_circle{
+    width: 61px;
+    height: 61px;
+    flex-shrink: 0;
+    background-color: #4FFF4B;
+    border-radius: 50%;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.yellow_circle{
+    width: 57px;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: #D7C94B;
+    border-radius: 50%;
+    border: none;
+}
+
+.blue_circle{
+    width: 57px;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: #3AD4B0;
+    border-radius: 50%;
+    border: none;
+}
+
+.simple-calc_container-secondary{
+    display: flex;
+    flex-direction: row;
+}
+
+/* SECCION DE LA IZQUIERDA 
+
+    Numeros
+    CE
+    TEXTO
+*/
+.simple-calc_container-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-calc_container-misc{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.simple-calc_container-misc div{
+    margin: 10px 10px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    height: 50px;
+    color: #FFF;    
+    text-align: center;
+    line-height: normal;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    background: #E94545;
+}
+
+.simple-calc_container-numbers{
+    display: flex;
+    justify-self: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.simple-calc_container-numbers button{
+    margin: 8px;
+
+}
+
+
+/*SIMBOLOS*/
+
+.simple-calc_container-operation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:0px 10px 0px 3px;   
+}
+
+
+.simple-calc_container-operation button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 0px;
+}
