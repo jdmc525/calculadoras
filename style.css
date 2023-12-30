@@ -54,8 +54,8 @@ body{
     display: flex;
     flex-direction: column;
     margin: 10px auto;
-    width: 302px;
-    height: 494px;
+    width: 310px;
+    min-height: 494px;
     border-radius: 40px;
     border: 2px solid #FF4005;
     background: #D9D9D9;
@@ -75,15 +75,16 @@ body{
     justify-content: space-evenly;
     align-self: center;
     align-items: center;
-    width: 284px;
-    min-height: 112px;
-    border-radius: 65px;
+    width: 300px;
+    min-height: 115px;
+    border-radius: 50px;
     background: rgba(141, 140, 140, 0.61);
-    margin-top: 10px ;
+    margin-top: 7px ;
 }
 
 .simple-calc_screen-result{
     margin: 0px 0px 5px 0px;
+    max-width: 260px;
     color: #FFF;
     text-align: center;
     font-family: Inter;
@@ -92,7 +93,6 @@ body{
     font-weight: 900;
     line-height: normal;
 }
-
 
 
 .simple-calc_container-screen{
@@ -110,7 +110,7 @@ body{
     flex-wrap: wrap;
     max-width:280px ;
     margin: 0px;
-    padding: 0px;
+    padding: 3px;
     color: #FFF;
     text-align: center;
     font-family: Inter;
@@ -188,26 +188,53 @@ IGUAL= AZUL
 .simple-calc_container-misc{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 3px 0px;
 }
 
 .simple-calc_container-misc div{
     margin: 10px 10px;
-    padding: 3px;
+    padding-right: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 138px;
-    height: 50px;
+    min-height: 50px;
     color: #FFF;    
     text-align: center;
     line-height: normal;
+    font-size: 15px;
     font-family: Inter;
-    font-size: 25px;
     font-style: normal;
     font-weight: 800;
-    background: #E94545;
+    background: red;
+
+    animation-name: bg_change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    transition: height 2s;
 }
+
+
+@keyframes bg_change {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    40%  {background-color: green;}	
+    100% {background-color: blue;}
+}
+
+/*
+
+No sirve todavia
+
+.simple-calc_container-misc-txt{
+    transition: height 3s;
+
+}
+*/
+
 
 .simple-calc_container-numbers{
     display: flex;

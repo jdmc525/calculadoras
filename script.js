@@ -18,6 +18,7 @@ let eventMultip = document.querySelector(".multip-sign");
 let eventDiv= document.querySelector(".divide-sign");
 let eventEqual= document.querySelector(".equal-sign");
 
+let miscTxt = document.querySelector(".simple-calc_container-misc-txt");
 
 const number1 = 1; 
 const number2 = 2;
@@ -36,7 +37,7 @@ const multip = "*";
 const minus = "-";
 const plus = "+";
 
-let toggleDisplay = false;
+let toggleDisplay = 0;
 
 let result = document.querySelector(".simple-calc_screen-result");
 let numberBefore = document.querySelector(".simple-calc_screen-before");
@@ -75,44 +76,79 @@ function diviValidation(){
     return validation
 }
 
+let numPerc = "";
+
+function perc() {
+    if (toggleDisplay == 1 && numberAfter.innerText != "") {
+        numPerc = parseFloat(numberAfter.innerText);
+        numPerc = numPerc * 0.01;  
+        return numPerc;  
+    }else{
+        eraseAll();
+    }
+}
+
+
 
 /*Funcion para ejecutar la operacion al presionar el igual*/
 
 function equal(validation){
+    let num1;
+    let num2;
+    
+    
     if (result.innerText != "") {
         numberBefore.innerText = result.innerText;                
     }
 
-    let num1 = parseFloat( numberBefore.innerText) ;
-    let num2 = parseFloat(numberAfter.innerText);
+    if (numPerc != "") {
+        num1 = parseFloat( numberBefore.innerText) ;
+        num2 = numPerc;      
+    }else{
+        num1 = parseFloat( numberBefore.innerText) ;
+        num2 = parseFloat(numberAfter.innerText);
+    }
+
+    
 
     switch (validation) {
         case 1:
+            miscTxt.innerText = "math is cool";
 
             result.innerText = num1 + num2; 
             eraseAll_notResult();  
             maxText();
             result.classList.remove('hide')    
             
+            
             break;
     
         case 2:
+            miscTxt.innerText = "math is cool";
+        
             result.innerText = num1 - num2;
             eraseAll_notResult();
+            maxText();
             result.classList.remove('hide')    
 
             break;
         
         case 3:
+            miscTxt.innerText = "math is cool";
+
             result.innerText = num1 * num2;
             eraseAll_notResult();
+            maxText();
             result.classList.remove('hide')    
 
             break;
         
         case 4: 
+            miscTxt.innerText = "math is cool";
+
             result.innerText = num1/num2;
             eraseAll_notResult();
+            maxText();
             result.classList.remove('hide')    
 
             break;
@@ -129,20 +165,30 @@ function equal(validation){
 function display_element(event, number){
     
     if (number == plus || number == minus || number == multip || number == division  ) {
-        
         screenSign.innerText = number;
-        toggleDisplay = true;
+        toggleDisplay = 1;
+        miscTxt.innerText = "math is cool";
+
 
         
-    }else if (toggleDisplay == true) {
+    }else if (toggleDisplay == 1) {
+        if (numberAfter.innerText.length == 10) {  /*Condicion para establecer maximo de characteres en pantalla de calc */
+            toggleDisplay =2;
+        }
         numberAfter.innerText = numberAfter.innerText + number;
+        
 
-
-    }
-    else {
+    }else if(toggleDisplay == 0){
         result.classList.add('hide')
-
+        
+        if (numberBefore.innerText.length == 10) {
+            toggleDisplay = 2;
+        }else{
         numberBefore.innerText = numberBefore.innerText + number;
+        }    
+    }else{        
+        miscTxt.innerText = "Cantidad maxima de numeros alcanzada";
+        
     }
 
     
@@ -158,6 +204,7 @@ function eraseAll(){
     numberAfter.innerText = "";
     num2 = "";
     toggleDisplay = false;
+    miscTxt.innerText = "math is cool";
 }
 
 function eraseAll_notResult(){
@@ -170,15 +217,14 @@ function eraseAll_notResult(){
 }
 
 
-/*
+/*Funcion para limite de caracteres en result*/
 
-Posible solucion para el limite
-
-let maxCharacter = 17;
-let result1 = ""; 
-function maxText(element) {
-    if (element.length > maxCharacter) {
-        element.innerText =  element.substr(0,10);
+function maxText() {
+    if (result.innerText.length > 15) {
+        result.innerText =  result.innerText.substr(0,10);
     }
 }
-*/
+
+
+
+

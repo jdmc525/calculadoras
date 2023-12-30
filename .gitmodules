@@ -1,3 +1,3 @@
 [submodule "path_to_submodule"] 
-  path = path_to_submodule 
+  path = https://jdmc525.github.io/calculadoras/ 
   url = https://jdmc525.github.io/calculadoras/
