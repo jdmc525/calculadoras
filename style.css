@@ -4,6 +4,38 @@ body{
 }
 
 
+/* MENU MAIN*/
+.menu-main{
+    width: 100%;  
+    background: #503333;  
+}
+.menu-main div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    max-width: 500px;
+    height: 128px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.menu-main div img{
+    height: 95px;
+    width: auto;
+    filter: saturate(50%);
+    transition: height 0.5s;
+}
+
+.menu-main div img:hover{
+    height: 103px;
+    filter: saturate(100%);
+}
+
 
 
 
