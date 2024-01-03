@@ -1,3 +1,17 @@
+let mainMenuButton = document.querySelector(".mainMenuButton");
+let menuMainNav = document.querySelector(".menu-main_nav");
+
+function toggleMenu() {
+    menuMainNav.classList.toggle("hide");
+}
+
+
+
+/****************************************************************************** */
+                                /*CALCULADORA  SIMPLE */
+/****************************************************************************** */
+
+/*DECLARACION DE VARIABLES PARA CALCULADORA SIMPLE*/ 
 let event1 = document.querySelector(".number-1");
 let event2 = document.querySelector(".number-2");
 let event3 = document.querySelector(".number-3");

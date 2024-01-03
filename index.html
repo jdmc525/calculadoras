@@ -12,11 +12,20 @@
 
     <header class="menu-main">
         <div>
-        <img src="/icons/calculator-menu.png" alt="menu">
+        <img class="mainMenuButton" src="/icons/calculator-menu.png" alt="menu" onclick="toggleMenu()">
         <h1>Calculadoras</h1>
         </div>    
     </header>
 
+    <nav class="menu-main_nav hide">
+        <div class="nav-elmnt-container_simpl"><img src="/icons/simple-menu.png" alt="simple-menu"><p>Simple</p></div>
+        <div class="nav-elmnt-container_calc"><img src="/icons/calculus-menu.png" alt="simple-menu"><p>Cálculo</p></div>
+        <div class="nav-elmnt-container_phy"><img src="/icons/physics-menu.png" alt="simple-menu"><p>Física</p></div>
+        <div class="nav-elmnt-container_est"><img src="/icons/statistics-menu.png" alt="simple-menu"><p>Estadística</p></div>
+    </nav>
+
+
+<div class="simple-calc">    
     <section class="simple-calc_welcome-main">
     <h2>Calculadora Simple</h2>
     <p>Bienvenido, usa la calculadora para calcular operaciones matematicas simples haciendo click en los iconos correspondientes</p>
@@ -64,6 +73,8 @@
         </div>
     </div>
     </div>
+
+</div>
     <script src="/script.js"></script>
 </body>
 </html>

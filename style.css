@@ -6,11 +6,17 @@ body{
 
 /* MENU MAIN*/
 .menu-main{
-    width: 100%;  
+    display: flex;
+    justify-content: space-evenly;
+    height: 138px;
+    width: 100%;
+    position: fixed;
+    top: 0%;  
     background: #503333;  
 }
 .menu-main div{
     display: flex;
+    position: fixed;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
@@ -26,6 +32,7 @@ body{
 
 .menu-main div img{
     height: 95px;
+    padding-right: 10px;
     width: auto;
     filter: saturate(50%);
     transition: height 0.5s;
@@ -40,6 +47,10 @@ body{
 
 
 /*DESCRIPCION*/
+
+.simple-calc{
+    margin-top: 200px;
+}
 
 .simple-calc_welcome-main{
     display: flex;
@@ -97,10 +108,6 @@ body{
 
 
 /*Pantalla*/
-.hide{
-    display: none;
-}
-
 .simple-calc_container-screen{
     display: flex;
     flex-direction: column;
@@ -257,6 +264,7 @@ IGUAL= AZUL
     100% {background-color: blue;}
 }
 
+
 /*
 
 No sirve todavia
@@ -303,4 +311,116 @@ No sirve todavia
     font-weight: 800;
     line-height: normal;
     padding: 0px;
+}
+
+
+
+/*NAV MENU BAR*/
+
+.menu-main_nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    justify-items: space-evenly;
+    margin-top: 138px;
+    width: 100%;
+    background-color: #E7D0D0;
+    animation: toggleDisplay 2s; /*ARREGLR ESTO FALTA MI REY*/
+    transition: display 5s;
+}
+
+
+
+.menu-main_nav div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin: 9px 0px 0px 0px;
+    padding: 10px 0px 10px 0px  ;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.nav-elmnt-container_simpl{
+    background-color: #50334B;
+}
+
+
+.nav-elmnt-container_calc{
+    background-color: #333850;
+}
+
+
+.nav-elmnt-container_phy{
+    background-color: #33504E;
+}
+
+
+.nav-elmnt-container_est{
+    background-color: #3C5033;
+}
+
+.menu-main_nav div img{
+    width: 66px;
+    height: auto;
+}
+
+
+@keyframes toggleMainMenu {
+    0%{left: -480 ; }
+    50%{left: -150;}
+    100%{left: 0;}
+}
+
+
+
+/*MEDIA QUERYS*/
+
+@media  (min-width: 500px) {
+
+    .menu-main_nav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        justify-items: space-evenly;
+        margin-top: 138px;
+        width: 300px;
+        background-color: #E7D0D0;
+    }
+
+
+    .menu-main{
+        display: flex;
+        justify-content: flex-start;
+        height: 138px;
+        width: 100%;
+        position: fixed;  
+        background: #503333;  
+    }
+
+    .menu-main div img{
+        height: 95px;
+        padding: 0px 15px 0px 15px;
+        width: auto;
+        filter: saturate(50%);
+        transition: height 0.5s;
+    }
+
+
+
+}
+
+
+/*ESTILOS ESPECIALES*/
+
+.hide{
+    display: none;
 }
