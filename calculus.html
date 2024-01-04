@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+    <header class="menu-main">
+        <div>
+        <img class="mainMenuButton" src="/icons/calculator-menu.png" alt="menu" onclick="toggleMenu()">
+        <h1>Calculadoras</h1>
+        </div>    
+    </header>
+
+    <nav class="menu-main_nav">
+        <div class="nav-elmnt-container_simpl">
+            <img src="/icons/simple-menu.png" alt="simple-menu">
+            <a href="/index.html"><p>Simple</p></a>
+        </div>
+        <div class="nav-elmnt-container_calc">
+            <img src="/icons/calculus-menu.png" alt="calc-menu">
+            <a href="#"><p>Cálculo</p></a>
+        </div>
+        <div class="nav-elmnt-container_phy">
+            <img src="/icons/physics-menu.png" alt="phy-menu">
+            <a href="#"><p>Física</p></a>
+        </div>
+        <div class="nav-elmnt-container_est">
+            <img src="/icons/statistics-menu.png" alt="stat-menu">
+            <a href="#"><p>Estadística</p></a>
+        </div>
+    </nav>
+
+<div class="calculus_external-container">
+    <section class="calculus_main-container">
+    <h2>Calculo de Derviadas e Integrales</h2>
+    <p>Bienvenido, usa el programa para calcular operaciones de Derivacion e Integracion</p>
+    
+    </section>  
+
+    <section class="calculus_typeSelection" >
+        <div class="calculus_optionD">
+            <img src="/icons/derivada.png" alt="derivada">
+            <p>Derivar</p>
+        </div>
+
+        <div class="calculus_optionI">
+            <img src="/icons/integral.png" alt="integral">
+            <p><div class="calculus_optionD">
+            <img src="/icons/derivada.png" alt="derivada">
+            <p>Integrar</p>
+        </div></p>
+        </div>
+    </section>
+
+    <section class="deriv_main-container">
+        <div class="deriv_options-container">
+                <button class="deriv_calcular"></button>
+                <div>
+                    <form action="/action_page.php">
+                        <input list="derivadas" name="derivada">
+                        <datalist class="deriv_element-cant">
+                          <option value="1">
+                          <option value="2">
+                          <option value="3">
+                          <option value="4">
+                          <option value="5">
+                        </datalist>
+                        <input type="submit">
+                      </form>
+                </div>
+        </div>        
+    </section>
+
+
+
+
+</div>
+
+    <script src="/script.js"></script>
+
+
+</body>
+</html>

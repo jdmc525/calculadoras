@@ -2,7 +2,8 @@ let mainMenuButton = document.querySelector(".mainMenuButton");
 let menuMainNav = document.querySelector(".menu-main_nav");
 
 function toggleMenu() {
-    menuMainNav.classList.toggle("hide");
+    menuMainNav.classList.toggle("transLeftRightLinear");
+        
 }
 
 
