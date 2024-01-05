@@ -1,3 +1,9 @@
+
+/****************************************************************************** */
+    /*/*=============BARRA DE NAVEGACION Y MENU =============*/
+/****************************************************************************** */
+
+
 let mainMenuButton = document.querySelector(".mainMenuButton");
 let menuMainNav = document.querySelector(".menu-main_nav");
 
@@ -12,7 +18,7 @@ function toggleMenu() {
                                 /*CALCULADORA  SIMPLE */
 /****************************************************************************** */
 
-/*DECLARACION DE VARIABLES PARA CALCULADORA SIMPLE*/ 
+/*---------DECLARACION DE VARIABLES PARA CALCULADORA SIMPLE---------*/ 
 let event1 = document.querySelector(".number-1");
 let event2 = document.querySelector(".number-2");
 let event3 = document.querySelector(".number-3");
@@ -65,7 +71,8 @@ let screenContainer = document.querySelector('.simple-calc_container-screen');
 let validation = 0;
 
 
-/* FUNCIONES PARA DETECTAR TIPO DE OPERACION
+/*---------FUNCIONES PARA DETECTAR TIPO DE OPERACION---------*/
+/*
     SUMA = 1
     RESTA= 2
     MULTIPLICACION = 3
@@ -105,7 +112,7 @@ function perc() {
 
 
 
-/*Funcion para ejecutar la operacion al presionar el igual*/
+/*---------Funcion para ejecutar la operacion al presionar el igual---------*/
 
 function equal(validation){
     let num1;
@@ -176,7 +183,7 @@ function equal(validation){
 
 
 
-/*Funcion para mostrar numeros en pantalla*/
+/*---------Funcion para mostrar numeros en pantalla Calc Simple---------*/
 function display_element(event, number){
     
     if (number == plus || number == minus || number == multip || number == division  ) {
@@ -210,7 +217,7 @@ function display_element(event, number){
 }
 
 
-/*Funcion de borrar (CE) */
+/*---------Funcion de borrar (CE)---------*/
 function eraseAll(){
     result.innerText = "";
     numberBefore.innerText = "";
@@ -232,7 +239,7 @@ function eraseAll_notResult(){
 }
 
 
-/*Funcion para limite de caracteres en result*/
+/*---------Funcion para limite de caracteres en result Calc Simple---------*/
 
 function maxText() {
     if (result.innerText.length > 15) {
@@ -243,3 +250,38 @@ function maxText() {
 
 
 
+/****************************************************************************** */
+/*=============CALCULADORA DE CALCULO=============*/
+/****************************************************************************** */
+
+
+/*---------SELECCIONAR OPERACION ---------*/
+
+let calculus_typeSelection = document.querySelector('.calculus_typeSelection')
+let derivSelectorButton = document.querySelector('#deriv-selector-img');
+let integSelectorButton = document.querySelector('#integ-selector-img');
+let calculusMainOp = document.querySelector('.calculus_main-op');
+
+derivSelectorButton.addEventListener('click', opSelectorCalculus);
+integSelectorButton.addEventListener('click', opSelectorCalculus);
+
+function opSelectorCalculus() {
+    calculus_typeSelection.classList.add('hide');
+    calculusMainOp.classList.remove('hide');
+}
+
+
+/*---------REALIZAR OPERACION---------*/
+
+let constant = document.querySelector('#constant');
+let escala = document.querySelector('#escala');
+let derivResult = document.querySelector(".deriv-result");
+
+let calculusOp = document.querySelector('#calculus-operation-deriv');
+
+calculusOp.addEventListener("submit",  function(event){
+    event.preventDefault();
+    let escala1 = parseInt(escala.value);
+    let constante1 = parseInt(constant.value)
+    derivResult.innerText = (escala1) * constante1 + "x" + "^" + (escala1 - 1)  ;
+});

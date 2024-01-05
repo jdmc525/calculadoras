@@ -9,6 +9,9 @@ a{
 }
 
 
+/*============= Menu de Navegacion y Header cabecera ================*/
+
+
 
 /* MENU MAIN*/
 .menu-main{
@@ -52,276 +55,7 @@ a{
 
 
 
-/*DESCRIPCION*/
-
-.simple-calc{
-    margin-top: 200px;
-}
-
-.simple-calc_welcome-main{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 50px auto;
-    flex-direction: column;
-    max-width: 691px;
-    min-height: 117px;
-    border-radius: 58.5px;
-    border: 1px solid #FFF;
-    background: rgba(224, 35, 35, 0.91);
-}
-
-.simple-calc_welcome-main h2{
-    color: #FFF;
-    text-align: center;
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin:  0px;
-}
-
-.simple-calc_welcome-main p{
-    display: flex;
-    justify-self: center;
-    text-align: center;
-    max-width: 650px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-
-/*FONDO CALC*/
-
-
-.simple-calc_container-main{
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    width: 310px;
-    min-height: 494px;
-    border-radius: 40px;
-    border: 2px solid #FF4005;
-    background: #D9D9D9;
-    margin-top: 20px;
-    padding: 7px 10px 20px 10px;
-}
-
-
-/*Pantalla*/
-.simple-calc_container-screen{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-self: center;
-    align-items: center;
-    width: 300px;
-    min-height: 115px;
-    border-radius: 50px;
-    background: rgba(141, 140, 140, 0.61);
-    margin-top: 7px ;
-}
-
-.simple-calc_screen-result{
-    margin: 0px 0px 5px 0px;
-    max-width: 260px;
-    color: #FFF;
-    text-align: center;
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-}
-
-
-.simple-calc_container-screen{
-    color: #FFF;
-    text-align: center;
-    font-family: Inter; 
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-}
-.screen-top{
-    display: flex;
-    flex-direction: row ;
-    flex-wrap: wrap;
-    max-width:280px ;
-    margin: 0px;
-    padding: 3px;
-    color: #FFF;
-    text-align: center;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.screen-top p{
-    margin: 0;
-    padding-left: 5px;
-    max-width: 284px;
-    flex-wrap: wrap;
-    
-}
-
-
-/*ESTILOS DE CIRCULOS 
-
-NUMEROS = VERDE
-SIMBOLOS = AMARILLO
-IGUAL= AZUL
-
-*/
-
-.green_circle{
-    width: 61px;
-    height: 61px;
-    flex-shrink: 0;
-    background-color: #4FFF4B;
-    border-radius: 50%;
-    border: none;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-}
-
-.yellow_circle{
-    width: 57px;
-    height: 56px;
-    flex-shrink: 0;
-    background-color: #D7C94B;
-    border-radius: 50%;
-    border: none;
-}
-
-.blue_circle{
-    width: 57px;
-    height: 56px;
-    flex-shrink: 0;
-    background-color: #3AD4B0;
-    border-radius: 50%;
-    border: none;
-}
-
-.simple-calc_container-secondary{
-    display: flex;
-    flex-direction: row;
-}
-
-/* SECCION DE LA IZQUIERDA 
-
-    Numeros
-    CE
-    TEXTO
-*/
-.simple-calc_container-left{
-    display: flex;
-    flex-direction: column;
-}
-
-.simple-calc_container-misc{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3px 0px;
-}
-
-.simple-calc_container-misc div{
-    margin: 10px 10px;
-    padding-right: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 138px;
-    min-height: 50px;
-    color: #FFF;    
-    text-align: center;
-    line-height: normal;
-    font-size: 15px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 800;
-    background: red;
-
-    animation-name: bg_change;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    transition: height 2s;
-}
-
-
-@keyframes bg_change {
-    0%   {background-color: red;}
-    25%  {background-color: orange;}
-    40%  {background-color: green;}	
-    100% {background-color: blue;}
-}
-
-
-/*
-
-No sirve todavia
-
-.simple-calc_container-misc-txt{
-    transition: height 3s;
-
-}
-*/
-
-
-.simple-calc_container-numbers{
-    display: flex;
-    justify-self: space-between;
-    flex-wrap: wrap;
-    
-}
-
-.simple-calc_container-numbers button{
-    margin: 8px;
-
-}
-
-
-/*SIMBOLOS*/
-
-.simple-calc_container-operation{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding:0px 10px 0px 3px;   
-}
-
-
-.simple-calc_container-operation button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    padding: 0px;
-}
-
-
-
-/*NAV MENU BAR*/
+/*---------NAV MENU BAR---------*/
 
 .menu-main_nav{
     display: flex;
@@ -389,7 +123,400 @@ No sirve todavia
 
 
 
-/*MEDIA QUERYS*/
+
+
+
+/*============= CALCULADORA SIMPLE CABECERA ================*/
+
+
+
+/*---------DESCRIPCION---------*/
+
+.simple-calc{
+    margin-top: 200px;
+}
+
+.simple-calc_welcome-main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px auto;
+    flex-direction: column;
+    max-width: 691px;
+    min-height: 117px;
+    border-radius: 58.5px;
+    border: 1px solid #FFF;
+    background: rgba(224, 35, 35, 0.91);
+}
+
+.simple-calc_welcome-main h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin:  0px;
+}
+
+.simple-calc_welcome-main p{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    max-width: 650px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/*---------FONDO CALCULADORA Calculadora Simple---------*/
+
+
+.simple-calc_container-main{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 310px;
+    min-height: 494px;
+    border-radius: 40px;
+    border: 2px solid #FF4005;
+    background: #D9D9D9;
+    margin-top: 20px;
+    padding: 7px 10px 20px 10px;
+}
+
+
+/*---------Pantalla Calculadora Simple---------*/
+.simple-calc_container-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+    width: 300px;
+    min-height: 115px;
+    border-radius: 50px;
+    background: rgba(141, 140, 140, 0.61);
+    margin-top: 7px ;
+}
+
+.simple-calc_screen-result{
+    margin: 0px 0px 5px 0px;
+    max-width: 260px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+
+.simple-calc_container-screen{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter; 
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.screen-top{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    max-width:280px ;
+    margin: 0px;
+    padding: 3px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.screen-top p{
+    margin: 0;
+    padding-left: 5px;
+    max-width: 284px;
+    flex-wrap: wrap;
+    
+}
+
+
+/*---------ESTILOS DE CIRCULOS Calculadora Simple---------*/ 
+/*
+NUMEROS = VERDE
+SIMBOLOS = AMARILLO
+IGUAL= AZUL
+
+*/
+
+.green_circle{
+    width: 61px;
+    height: 61px;
+    flex-shrink: 0;
+    background-color: #4FFF4B;
+    border-radius: 50%;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.yellow_circle{
+    width: 57px;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: #D7C94B;
+    border-radius: 50%;
+    border: none;
+}
+
+.blue_circle{
+    width: 57px;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: #3AD4B0;
+    border-radius: 50%;
+    border: none;
+}
+
+.simple-calc_container-secondary{
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------SECCION DE LA IZQUIERDA Calculadora Simple---------*/ 
+/*
+    Numeros
+    CE
+    TEXTO
+*/
+.simple-calc_container-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-calc_container-misc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px 0px;
+}
+
+.simple-calc_container-misc div{
+    margin: 10px 10px;
+    padding-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    min-height: 50px;
+    color: #FFF;    
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    background: red;
+
+    animation-name: bg_change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    transition: height 2s;
+}
+
+
+@keyframes bg_change {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    40%  {background-color: green;}	
+    100% {background-color: blue;}
+}
+
+.simple-calc_container-numbers{
+    display: flex;
+    justify-self: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.simple-calc_container-numbers button{
+    margin: 8px;
+
+}
+
+
+/*---------SIMBOLOS Calculadora Simple---------*/
+
+.simple-calc_container-operation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:0px 10px 0px 3px;   
+}
+
+
+.simple-calc_container-operation button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 0px;
+}
+
+
+/*=============CALCULADORA DE CALCULO CABECERA=============*/
+
+
+
+/*---------TITULO Y DESCRIPCION---------*/
+.calculus_external-container{
+    margin-top: 200px;
+}
+
+.calculus_main-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px auto;
+    flex-direction: column;
+    max-width: 691px;
+    min-height: 117px;
+    border-radius: 58.5px;
+    border: 1px solid #FFF;
+    background: #0077C7;
+}
+
+.calculus_main-container h2{
+    padding: 15px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin:  0px;
+}
+
+.calculus_main-container p{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    max-width: 650px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*---------SELECCION DE OPERACION---------*/
+
+.calculus_typeSelection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.calculus_optionD, .calculus_optionI{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 180px;
+}
+
+.calculus_optionD img, .calculus_optionI img {
+    width: 100px;
+    height: auto;
+}
+
+.calculus_optionD p, .calculus_optionI p{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+/*---------OPERACION DERIVADAS---------*/
+
+.calculus-op_options-container{
+    width: 282px;
+    height: 173px;
+    flex-shrink: 0;
+    background: #3B4059;
+}
+
+.operation-deriv_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: #333850;
+    max-width: 400px;
+}
+
+#escala, #constant{
+    margin-top: 30px;
+    text-align: center;
+    background: #3AD4B0;
+    font-family: Inter;
+    height: 25px;
+    width: 30px;
+    padding: 0px;
+}
+
+#calcular-deriv-btn{
+    margin: 30px 0px 10px 0px;
+    padding: 8px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: #0077C7;
+    border-radius: 15%;
+    
+}
+
+
+/*=============MEDIA QUERYS=============*/
 
 @media  (min-width: 500px) {
 
@@ -427,7 +554,7 @@ No sirve todavia
 }
 
 
-/*ESTILOS ESPECIALES*/
+/*=============ESTILOS ESPECIALES=============*/
 
 .hide{
     display: none;

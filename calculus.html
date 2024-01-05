@@ -24,7 +24,7 @@
         </div>
         <div class="nav-elmnt-container_calc">
             <img src="/icons/calculus-menu.png" alt="calc-menu">
-            <a href="#"><p>Cálculo</p></a>
+            <a href="/calculus.html"><p>Cálculo</p></a>
         </div>
         <div class="nav-elmnt-container_phy">
             <img src="/icons/physics-menu.png" alt="phy-menu">
@@ -38,26 +38,53 @@
 
 <div class="calculus_external-container">
     <section class="calculus_main-container">
-    <h2>Calculo de Derviadas e Integrales</h2>
-    <p>Bienvenido, usa el programa para calcular operaciones de Derivacion e Integracion</p>
+    <h2>Calculo de Derivadas e Integrales</h2>
+    <p>Bienvenido! Usa el programa para calcular operaciones de Derivacion e Integracion</p>
     
     </section>  
 
     <section class="calculus_typeSelection" >
         <div class="calculus_optionD">
-            <img src="/icons/derivada.png" alt="derivada">
+            <img id="deriv-selector-img"  src="/icons/derivada.png" alt="derivada">
             <p>Derivar</p>
         </div>
 
         <div class="calculus_optionI">
-            <img src="/icons/integral.png" alt="integral">
-            <p><div class="calculus_optionD">
-            <img src="/icons/derivada.png" alt="derivada">
+            <img id="integ-selector-img" src="/icons/integral.png" alt="integral">
             <p>Integrar</p>
-        </div></p>
         </div>
     </section>
 
+    <section class="calculus_main-op hide">
+
+        
+        <div class="operation-deriv_container">
+            <form id="calculus-operation-deriv">
+                <label for="constant">f(x) = </label>
+                <input type="text" id="constant" name="constant">
+                <label for="escala"> x^ </label>
+                <input type="text" id="escala" name="escala"><br>
+                <input  id="calcular-deriv-btn" type="submit" value="CALCULAR">
+            </form>
+            <p class="deriv-result"></p>
+        </div>
+
+        <div class="calculus-op_options-container">
+            <div class="calculus-op_settings-container">
+                <p>Opciones</p>
+                <div class="calculus-op_settings">
+                <p>Cantidad de Elementos</p>
+                <p>1</p><br>
+                <p>Tipo de Operación</p>
+                
+                </div>    
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- 
     <section class="deriv_main-container">
         <div class="deriv_options-container">
                 <button class="deriv_calcular"></button>
@@ -76,7 +103,7 @@
                 </div>
         </div>        
     </section>
-
+ -->
 
 
 
