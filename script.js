@@ -98,6 +98,9 @@ function diviValidation(){
     return validation
 }
 
+
+/*---------Funcion para ejecutar operacion con porcentaje---------*/
+
 let numPerc = "";
 
 function perc() {
@@ -139,7 +142,7 @@ function equal(validation){
 
             result.innerText = num1 + num2; 
             eraseAll_notResult();  
-            maxText();
+            maxText(result);
             result.classList.remove('hide')    
             
             
@@ -150,7 +153,7 @@ function equal(validation){
         
             result.innerText = num1 - num2;
             eraseAll_notResult();
-            maxText();
+            maxText(result);
             result.classList.remove('hide')    
 
             break;
@@ -160,7 +163,7 @@ function equal(validation){
 
             result.innerText = num1 * num2;
             eraseAll_notResult();
-            maxText();
+            maxText(result);
             result.classList.remove('hide')    
 
             break;
@@ -170,7 +173,7 @@ function equal(validation){
 
             result.innerText = num1/num2;
             eraseAll_notResult();
-            maxText();
+            maxText(result);
             result.classList.remove('hide')    
 
             break;
@@ -239,14 +242,6 @@ function eraseAll_notResult(){
 }
 
 
-/*---------Funcion para limite de caracteres en result Calc Simple---------*/
-
-function maxText() {
-    if (result.innerText.length > 15) {
-        result.innerText =  result.innerText.substr(0,10);
-    }
-}
-
 
 
 
@@ -260,18 +255,23 @@ function maxText() {
 let calculus_typeSelection = document.querySelector('.calculus_typeSelection')
 let derivSelectorButton = document.querySelector('#deriv-selector-img');
 let integSelectorButton = document.querySelector('#integ-selector-img');
-let calculusMainOp = document.querySelector('.calculus_main-op');
+let calculusOpDeriv = document.querySelector('.calculus_op-deriv');
 
-derivSelectorButton.addEventListener('click', opSelectorCalculus);
-integSelectorButton.addEventListener('click', opSelectorCalculus);
+derivSelectorButton.addEventListener('click', opSelectorDeriv);
+integSelectorButton.addEventListener('click', opSelectorInteg);
 
-function opSelectorCalculus() {
+function opSelectorDeriv() {
     calculus_typeSelection.classList.add('hide');
-    calculusMainOp.classList.remove('hide');
+    calculusOpDeriv.classList.remove('hide');
+}
+
+function opSelectorInteg() {
+    calculus_typeSelection.classList.add('hide');
+    //.classList.remove('hide');  Falta crear todo lo de integrales
 }
 
 
-/*---------REALIZAR OPERACION---------*/
+/*---------REALIZAR OPERACION DE DERIVADA SIMPLE---------*/
 
 let constant = document.querySelector('#constant');
 let escala = document.querySelector('#escala');
@@ -281,7 +281,44 @@ let calculusOp = document.querySelector('#calculus-operation-deriv');
 
 calculusOp.addEventListener("submit",  function(event){
     event.preventDefault();
+   
     let escala1 = parseInt(escala.value);
     let constante1 = parseInt(constant.value)
-    derivResult.innerText = (escala1) * constante1 + "x" + "^" + (escala1 - 1)  ;
+
+    if (constant.value != '' && escala.value != '' ) {
+        derivResult.classList.remove('hide');   
+        derivResult.innerText = (escala1) * constante1 + "x" + "^" + (escala1 - 1)  ;
+        maxText(derivResult);
+    }
+
 });
+
+/*---------BORRAR DERIVADA---------*/
+
+let derivReset = document.querySelector('#deriv-reset');
+derivReset.addEventListener('click', function(){
+    derivResult.innerText = "";
+    derivResult.classList.add('hide');   
+
+
+});
+
+/*---------BOTON ATRAS DERIVADA---------*/
+let backBtnDeriv = document.querySelector('#back-btn-deriv');
+
+backBtnDeriv.addEventListener('click', function() {
+    calculus_typeSelection.classList.remove('hide');
+    calculusOpDeriv.classList.add('hide');
+});
+
+
+
+/************************************************************** */
+/*=============Funcion general para limite de caracteres=============*/
+/************************************************************** */
+function maxText(resultado) {
+    if (resultado.innerText.length > 15) {
+        resultado.innerText =  resultado.innerText.substr(0,10);
+    }
+}
+

@@ -399,7 +399,7 @@ IGUAL= AZUL
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 50px auto;
+    margin: 0px auto;
     flex-direction: column;
     max-width: 691px;
     min-height: 117px;
@@ -440,6 +440,7 @@ IGUAL= AZUL
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    margin-top: 35px;
 }
 
 .calculus_optionD, .calculus_optionI{
@@ -468,6 +469,15 @@ IGUAL= AZUL
 
 /*---------OPERACION DERIVADAS---------*/
 
+.calculus_op-deriv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
 .calculus-op_options-container{
     width: 282px;
     height: 173px;
@@ -477,8 +487,10 @@ IGUAL= AZUL
 
 .operation-deriv_container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    min-height: 200px;
     color: #FFF;
     text-align: center;
     font-family: Inter;
@@ -487,7 +499,8 @@ IGUAL= AZUL
     font-weight: 800;
     line-height: normal;
     background: #333850;
-    max-width: 400px;
+    min-width: 375px;
+
 }
 
 #escala, #constant{
@@ -496,11 +509,11 @@ IGUAL= AZUL
     background: #3AD4B0;
     font-family: Inter;
     height: 25px;
-    width: 30px;
+    width: 53px;
     padding: 0px;
 }
 
-#calcular-deriv-btn{
+#calcular-deriv-btn, #deriv-reset{
     margin: 30px 0px 10px 0px;
     padding: 8px;
     color: #FFF;
@@ -511,9 +524,22 @@ IGUAL= AZUL
     font-weight: 800;
     line-height: normal;
     background-color: #0077C7;
-    border-radius: 15%;
+    border-radius: 10px 0px 10px 0px;
     
 }
+
+
+.calculus_op-deriv span img{   
+    height: 70px;
+    width: auto;
+}
+
+.deriv-result{
+    max-width: 200px;
+    border-bottom: solid;
+    text-overflow: ellipsis;
+}
+
 
 
 /*=============MEDIA QUERYS=============*/
