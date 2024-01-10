@@ -45,12 +45,12 @@
 
     <section class="calculus_typeSelection" >
         <div class="calculus_optionD">
-            <img id="deriv-selector-img"  src="/icons/derivada.png" alt="derivada">
+            <img id="deriv-selector-img"  src="/icons/derivada_webp.webp" alt="derivada">
             <p>Derivar</p>
         </div>
 
         <div class="calculus_optionI">
-            <img id="integ-selector-img" src="/icons/integral.png" alt="integral">
+            <img id="integ-selector-img" src="/icons/integral_webp.webp" alt="integral">
             <p>Integrar</p>
         </div>
     </section>
@@ -71,8 +71,31 @@
 
         </div>
 
-        <span><img id="back-btn-deriv" src="/icons/back_calculus.png" alt="back-btn"></span>
+        <span><img class="back-btn-deriv" src="/icons/back_calculus.png" alt="back-btn"></span>
 
+
+    </section>
+
+        
+    <section class="calculus_op-integr hide">
+        
+        <div class="operation-integr_container">
+            <form id="calculus-operation-integr">
+                <label id="int-symb" for="constant">∫</label>
+                <input type="text" id="constant-integr" name="constant-integr">
+                <label for="escala"> x^ </label>
+                <input type="text" id="escala-integr" name="escala-integr"><br>
+                <input  id="calcular-integr-btn" type="submit" value="CALCULAR">
+                <input id="integr-reset" type="reset" value="BORRAR">
+
+            </form>
+            <p class="integr-result hide"></p>
+
+        </div>
+
+        <span><img class="back-btn-int" src="/icons/back_calculus.png" alt="back-btn"></span>
+
+    </section>
 <!-- 
 
     Tentativa por si se quiere hacer mas complejo, se podria poner al

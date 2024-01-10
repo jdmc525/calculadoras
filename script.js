@@ -256,6 +256,7 @@ let calculus_typeSelection = document.querySelector('.calculus_typeSelection')
 let derivSelectorButton = document.querySelector('#deriv-selector-img');
 let integSelectorButton = document.querySelector('#integ-selector-img');
 let calculusOpDeriv = document.querySelector('.calculus_op-deriv');
+let calculusOpIntegr = document.querySelector('.calculus_op-integr');
 
 derivSelectorButton.addEventListener('click', opSelectorDeriv);
 integSelectorButton.addEventListener('click', opSelectorInteg);
@@ -267,7 +268,7 @@ function opSelectorDeriv() {
 
 function opSelectorInteg() {
     calculus_typeSelection.classList.add('hide');
-    //.classList.remove('hide');  Falta crear todo lo de integrales
+    calculusOpIntegr.classList.remove('hide'); 
 }
 
 
@@ -296,15 +297,16 @@ calculusOp.addEventListener("submit",  function(event){
 /*---------BORRAR DERIVADA---------*/
 
 let derivReset = document.querySelector('#deriv-reset');
-derivReset.addEventListener('click', function(){
-    derivResult.innerText = "";
-    derivResult.classList.add('hide');   
 
-
+derivReset.addEventListener( 'click', function () {
+    resetCalculus(derivResult);
 });
 
+
+
+
 /*---------BOTON ATRAS DERIVADA---------*/
-let backBtnDeriv = document.querySelector('#back-btn-deriv');
+let backBtnDeriv = document.querySelector('.back-btn-deriv');
 
 backBtnDeriv.addEventListener('click', function() {
     calculus_typeSelection.classList.remove('hide');
@@ -313,8 +315,65 @@ backBtnDeriv.addEventListener('click', function() {
 
 
 
+/*---------REALIZAR OPERACION DE INTEGRAL SIMPLE---------*/
+
+let constIntegr = document.querySelector('#constant-integr');
+let integrResult = document.querySelector('.integr-result');
+let escIntegr = document.querySelector('#escala-integr');
+let calcIntegrBtn = document.querySelector('#calculus-operation-integr');
+
+calcIntegrBtn.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let escIntegrR = parseFloat(escIntegr.value);
+    let constIntegrR = parseFloat(constIntegr.value)
+    let maxConstStr;
+    let maxConstFlt;
+    let maxConstSubstr;
+
+    if (escIntegr.value != '' && constIntegr.value != '' ) {
+        integrResult.classList.remove('hide'); 
+        maxConstFlt = (constIntegrR / (escIntegrR + 1 ))
+        maxConstStr = maxConstFlt.toString();
+        maxConstSubstr = maxConstStr.substring(0,5);
+        integrResult.innerText = maxConstSubstr  + "x" + "^" + (escIntegrR + 1)  ;
+        
+        maxText(integrResult);
+    }
+    
+});
+
+/*---------BORRAR INTEGRAL---------*/
+
+
+let integrReset = document.querySelector('#integr-reset');
+
+integrReset.addEventListener( 'click', function () {
+    resetCalculus(integrResult);
+});
+
+
+
+
+/*---------BOTON ATRAS INTEGRAL---------*/
+let backBtnInt = document.querySelector('.back-btn-int');
+let calculusOpIntegrCont = document.querySelector('.calculus_op-integr');
+
+backBtnInt.addEventListener('click', function() {
+    calculus_typeSelection.classList.remove('hide');
+    calculusOpIntegrCont.classList.add('hide');
+});
+
+
+
+
+
+
+
+
+
 /************************************************************** */
-/*=============Funcion general para limite de caracteres=============*/
+/*=============FUNCION PARA LIMITE DE CARACTERES=============*/
 /************************************************************** */
 function maxText(resultado) {
     if (resultado.innerText.length > 15) {
@@ -322,3 +381,13 @@ function maxText(resultado) {
     }
 }
 
+
+/************************************************************** */
+/*=============FUNCION PARA BORRAR CALCULO DE LA SECCION DE CALCULO=============*/
+/************************************************************** */
+
+
+function resetCalculus(operation){
+    operation.innerText = "";
+    operation.classList.add('hide');   
+};

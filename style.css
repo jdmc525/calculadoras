@@ -158,6 +158,7 @@ a{
     font-weight: 700;
     line-height: normal;
     margin:  0px;
+    padding-top: 10px;
 }
 
 .simple-calc_welcome-main p{
@@ -469,7 +470,7 @@ IGUAL= AZUL
 
 /*---------OPERACION DERIVADAS---------*/
 
-.calculus_op-deriv{
+.calculus_op-deriv , .calculus_op-integr{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -485,7 +486,9 @@ IGUAL= AZUL
     background: #3B4059;
 }
 
-.operation-deriv_container{
+
+
+.operation-deriv_container, .operation-integr_container{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -503,7 +506,7 @@ IGUAL= AZUL
 
 }
 
-#escala, #constant{
+#escala, #constant , #escala-integr, #constant-integr {
     margin-top: 30px;
     text-align: center;
     background: #3AD4B0;
@@ -513,7 +516,7 @@ IGUAL= AZUL
     padding: 0px;
 }
 
-#calcular-deriv-btn, #deriv-reset{
+#calcular-deriv-btn, #deriv-reset, #integr-reset, #calcular-integr-btn{
     margin: 30px 0px 10px 0px;
     padding: 8px;
     color: #FFF;
@@ -529,7 +532,7 @@ IGUAL= AZUL
 }
 
 
-.calculus_op-deriv span img{   
+.back-btn-deriv, .back-btn-int{   
     height: 70px;
     width: auto;
 }
@@ -538,6 +541,12 @@ IGUAL= AZUL
     max-width: 200px;
     border-bottom: solid;
     text-overflow: ellipsis;
+}
+
+
+#int-symb{
+    padding-right: 5px;   
+    font-size: 50px;
 }
 
 
