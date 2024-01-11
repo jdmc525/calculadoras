@@ -393,7 +393,7 @@ IGUAL= AZUL
 
 /*---------TITULO Y DESCRIPCION---------*/
 .calculus_external-container{
-    margin-top: 200px;
+    margin-top: 170px;
 }
 
 .calculus_main-container{
@@ -442,6 +442,8 @@ IGUAL= AZUL
     align-items: center;
     width: 100%;
     margin-top: 35px;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 .calculus_optionD, .calculus_optionI{
@@ -454,8 +456,10 @@ IGUAL= AZUL
 }
 
 .calculus_optionD img, .calculus_optionI img {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100px;
+    transition: height 0.2s;
+
 }
 
 .calculus_optionD p, .calculus_optionI p{
@@ -467,8 +471,17 @@ IGUAL= AZUL
     line-height: normal;
 }
 
+#deriv-selector-img:hover, #integ-selector-img:hover{
+    height: 105px;
+    width: auto;
+    cursor: pointer;
 
-/*---------OPERACION DERIVADAS---------*/
+}
+
+
+
+
+/*---------OPERACION DERIVADAS E INTEGRALES ---------*/
 
 .calculus_op-deriv , .calculus_op-integr{
     display: flex;
@@ -477,7 +490,11 @@ IGUAL= AZUL
     align-items: center;
     width: 100%;
     height: 400px;
+    opacity: 0;
+    transition: opacity 1s ease;
+
 }
+
 
 .calculus-op_options-container{
     width: 282px;
@@ -506,6 +523,9 @@ IGUAL= AZUL
 
 }
 
+
+/*---------ELEMENTOS DEL CALCULO ---------*/
+
 #escala, #constant , #escala-integr, #constant-integr {
     margin-top: 30px;
     text-align: center;
@@ -515,6 +535,15 @@ IGUAL= AZUL
     width: 53px;
     padding: 0px;
 }
+
+
+#int-symb{
+    padding-right: 5px;   
+    font-size: 50px;
+}
+
+
+/*---------BOTONES CALCULAR, BORRAR Y BACK---------*/
 
 #calcular-deriv-btn, #deriv-reset, #integr-reset, #calcular-integr-btn{
     margin: 30px 0px 10px 0px;
@@ -535,18 +564,26 @@ IGUAL= AZUL
 .back-btn-deriv, .back-btn-int{   
     height: 70px;
     width: auto;
+    transition: height 0.2s;
 }
 
-.deriv-result{
-    max-width: 200px;
+
+
+
+.back-btn-deriv:hover, .back-btn-int{
+    height: 75px;
+    width: auto;
+    cursor: pointer;
+}
+
+/*---------RESULTADO ---------*/
+
+
+.deriv-result, .integr-result{
+    display: block;
     border-bottom: solid;
-    text-overflow: ellipsis;
-}
-
-
-#int-symb{
-    padding-right: 5px;   
-    font-size: 50px;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 
@@ -584,7 +621,25 @@ IGUAL= AZUL
         transition: height 0.5s;
     }
 
-
+    .operation-deriv_container, .operation-integr_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 200px;
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        background: #333850;
+        width: 500px;
+    
+    }
+    
+    
 
 }
 

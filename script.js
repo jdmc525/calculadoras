@@ -264,11 +264,23 @@ integSelectorButton.addEventListener('click', opSelectorInteg);
 function opSelectorDeriv() {
     calculus_typeSelection.classList.add('hide');
     calculusOpDeriv.classList.remove('hide');
+    calculus_typeSelection.style.opacity = '0'
+
+    setTimeout(function() {
+        calculusOpDeriv.style.opacity = '1';
+    }, 0);
+
+
 }
 
 function opSelectorInteg() {
     calculus_typeSelection.classList.add('hide');
-    calculusOpIntegr.classList.remove('hide'); 
+    calculusOpIntegr.classList.remove('hide');
+    calculus_typeSelection.style.opacity = '0'
+
+    setTimeout(function() {
+        calculusOpIntegr.style.opacity = '1';
+    }, 0); 
 }
 
 
@@ -288,6 +300,12 @@ calculusOp.addEventListener("submit",  function(event){
 
     if (constant.value != '' && escala.value != '' ) {
         derivResult.classList.remove('hide');   
+
+        //**Animacion de opacidad */
+        setTimeout(function() {
+            derivResult.style.opacity = '1';
+        }, 0);
+
         derivResult.innerText = (escala1) * constante1 + "x" + "^" + (escala1 - 1)  ;
         maxText(derivResult);
     }
@@ -299,7 +317,10 @@ calculusOp.addEventListener("submit",  function(event){
 let derivReset = document.querySelector('#deriv-reset');
 
 derivReset.addEventListener( 'click', function () {
+    derivResult.style.opacity = '0';
+
     resetCalculus(derivResult);
+    
 });
 
 
@@ -311,6 +332,12 @@ let backBtnDeriv = document.querySelector('.back-btn-deriv');
 backBtnDeriv.addEventListener('click', function() {
     calculus_typeSelection.classList.remove('hide');
     calculusOpDeriv.classList.add('hide');
+    calculusOpDeriv.style.opacity = '0'
+
+
+    setTimeout(function() {
+        calculus_typeSelection.style.opacity = '1';
+    }, 0); 
 });
 
 
@@ -333,6 +360,11 @@ calcIntegrBtn.addEventListener('submit', function(event) {
 
     if (escIntegr.value != '' && constIntegr.value != '' ) {
         integrResult.classList.remove('hide'); 
+
+        setTimeout(function() {
+            integrResult.style.opacity = '1';
+        }, 0);
+
         maxConstFlt = (constIntegrR / (escIntegrR + 1 ))
         maxConstStr = maxConstFlt.toString();
         maxConstSubstr = maxConstStr.substring(0,5);
@@ -350,6 +382,8 @@ let integrReset = document.querySelector('#integr-reset');
 
 integrReset.addEventListener( 'click', function () {
     resetCalculus(integrResult);
+    integrResult.style.opacity = '0';
+
 });
 
 
@@ -362,6 +396,15 @@ let calculusOpIntegrCont = document.querySelector('.calculus_op-integr');
 backBtnInt.addEventListener('click', function() {
     calculus_typeSelection.classList.remove('hide');
     calculusOpIntegrCont.classList.add('hide');
+
+
+    calculusOpIntegr.style.opacity = '0'
+
+
+    setTimeout(function() {
+        calculus_typeSelection.style.opacity = '1';
+    }, 0);
+
 });
 
 
