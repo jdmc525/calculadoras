@@ -588,6 +588,96 @@ IGUAL= AZUL
 
 
 
+
+/*=============CALCULADORA DE FISICA CABECERA=============*/
+
+.phy-main_external-container{
+margin-top: 170px;
+}
+
+.phy-main_descrip-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px auto;
+    flex-direction: column;
+    max-width: 691px;
+    min-height: 117px;
+    border-radius: 58.5px;
+    border: 1px solid #FFF;
+    background: #3e7148;
+    text-align: center;
+}
+
+
+.phy-main_descrip-container h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin:  0px;
+    padding-top: 10px;
+}
+
+.phy-main_descrip-container p{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    max-width: 650px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.phy-main_op-ext-section-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.phy-lbl-opts{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.phy-input-styles{
+    background-color: #48CF08;
+    width: 200px;
+    height: 25px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px;
+    
+}
+
+.phy-main_options-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+
 /*=============MEDIA QUERYS=============*/
 
 @media  (min-width: 500px) {
@@ -638,10 +728,15 @@ IGUAL= AZUL
         width: 500px;
     
     }
-    
-    
-
 }
+
+
+
+
+
+
+
+
 
 
 /*=============ESTILOS ESPECIALES=============*/

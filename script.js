@@ -284,6 +284,8 @@ function opSelectorInteg() {
 }
 
 
+/*=============DERIVADAS=============*/
+
 /*---------REALIZAR OPERACION DE DERIVADA SIMPLE---------*/
 
 let constant = document.querySelector('#constant');
@@ -341,6 +343,8 @@ backBtnDeriv.addEventListener('click', function() {
 });
 
 
+
+/*=============INTEGRALES=============*/
 
 /*---------REALIZAR OPERACION DE INTEGRAL SIMPLE---------*/
 

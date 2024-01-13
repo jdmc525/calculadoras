@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+    <header class="menu-main">
+        <div>
+        <img class="mainMenuButton" src="/icons/calculator-menu.png" alt="menu" onclick="toggleMenu()">
+        <h1>Calculadoras</h1>
+        </div>    
+    </header>
+
+    <nav class="menu-main_nav">
+        <div class="nav-elmnt-container_simpl">
+            <img src="/icons/simple-menu.png" alt="simple-menu">
+            <a href="/index.html"><p>Simple</p></a>
+        </div>
+        <div class="nav-elmnt-container_calc">
+            <img src="/icons/calculus-menu.png" alt="calc-menu">
+            <a href="/calculus.html"><p>Cálculo</p></a>
+        </div>
+        <div class="nav-elmnt-container_phy">
+            <img src="/icons/physics-menu.png" alt="phy-menu">
+            <a href="#"><p>Física</p></a>
+        </div>
+        <div class="nav-elmnt-container_est">
+            <img src="/icons/statistics-menu.png" alt="stat-menu">
+            <a href="#"><p>Estadística</p></a>
+        </div>
+    </nav>
+
+
+    <div class="phy-main_external-container">
+
+        <section class="phy-main_descrip-container">
+            <h2>Fisica Clasica</h2>
+            <p>Bienvenido! Usa el programa para calcular operaciones de cinematica simple</p>
+            
+        </section>  
+
+        <section class="phy-main_op-ext-section-cont">
+            <div class="phy-main_options-cont">
+                <form class="phy-main_options-form">
+                    <div><label for="phy_mtrc-sys-opt" class="phy-lbl-opts">Sistema Metrico</label></div>
+                        <input type="text" id="phy_mtrc-sys-opt" list="mtrc-sys-opts" class="phy-input-styles">
+                            <datalist id="mtrc-sys-opts">
+                                <option value="Ingles">
+                                <option value="Internacional">
+                            </datalist>
+
+                    <div><label for="phy_operation-opt" class="phy-lbl-opts">Elemento a Calcular</label></div>
+                        <input type="text" id="phy_operation-opt" list = "operation-opts" class="phy-input-styles">
+                            <datalist id="operation-opts">
+                                <option value="Posicion">
+                                <option value="Velocidad">
+                                <option value="Aceleracion">    
+                            </datalist>                                                
+                    
+                    <div class="phy-options_ok">
+                        <input type="submit">
+                    </div>                        
+                </form>  
+            </div>
+        
+            <div class="phy-op_external-container ">
+                
+                <div class="operation-posF_container">
+                    <p class="phy-operation_title" >Posicion Final</p>
+                    <form id="operation-posF">
+                        <label for="posF_POS-IN">Posicion Inicial</label>
+                        <input type="text" id="posF_POS-IN" name="posF_POS-IN">
+                        <label for="posF_VEL-I">Velocidad Inicial</label>
+                        <input type="text" id="posF_VEL-I" name="posF_VEL-I"><br>
+                        <label for="posF_VEL-I">Aceleración</label>
+                        <input type="text" id="posF_VEL-I" name="posF_VEL-I"><br>
+                        <label for="posF_TIME">Tiempo</label>
+                        <input type="text" id="posF_TIME" name="posF_TIME"><br>
+                        
+                        <input  id="calc-posF-btn" type="submit" value="CALCULAR">
+                        <input id="posF-reset" type="reset" value="BORRAR">
+        
+                    </form>
+                    <p class="posF-result hide"></p>
+        
+                </div>
+                
+        
+
+
+                <span><img class="phy-back-btn" src="/icons/back_calculus.png" alt="back-btn"></span>
+        
+        
+            </div>
+        </section>
+    
+    
+    
+    
+    </div>
+
+
+
+<script src="/script.js"></script>
+
+
+</body>
+</html>
