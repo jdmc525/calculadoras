@@ -47,6 +47,7 @@
 
         <section class="phy-main_op-ext-section-cont">
             <div class="phy-main_options-cont">
+                <p class="phy-options_title phy-title-style" >Opciones</p>
                 <form class="phy-main_options-form">
                     <div><label for="phy_mtrc-sys-opt" class="phy-lbl-opts">Sistema Metrico</label></div>
                         <input type="text" id="phy_mtrc-sys-opt" list="mtrc-sys-opts" class="phy-input-styles">
@@ -63,28 +64,28 @@
                                 <option value="Aceleracion">    
                             </datalist>                                                
                     
-                    <div class="phy-options_ok">
-                        <input type="submit">
+                    <div class="phy-options_ok-cont">
+                        <input type="submit" id="phy-options_ok" class="phy-btns-styles">
                     </div>                        
                 </form>  
             </div>
         
             <div class="phy-op_external-container ">
                 
-                <div class="operation-posF_container">
-                    <p class="phy-operation_title" >Posicion Final</p>
+                <div class="operation-posF_container phy-operation-container-stl">
+                    <p class="phy-operation_title phy-title-style" >Posicion Final</p>
                     <form id="operation-posF">
-                        <label for="posF_POS-IN">Posicion Inicial</label>
-                        <input type="text" id="posF_POS-IN" name="posF_POS-IN">
-                        <label for="posF_VEL-I">Velocidad Inicial</label>
-                        <input type="text" id="posF_VEL-I" name="posF_VEL-I"><br>
-                        <label for="posF_VEL-I">Aceleración</label>
-                        <input type="text" id="posF_VEL-I" name="posF_VEL-I"><br>
-                        <label for="posF_TIME">Tiempo</label>
-                        <input type="text" id="posF_TIME" name="posF_TIME"><br>
-                        
-                        <input  id="calc-posF-btn" type="submit" value="CALCULAR">
-                        <input id="posF-reset" type="reset" value="BORRAR">
+                        <label class="phy-lbl-opts"  for="posF_POS-IN">Posicion Inicial</label>
+                        <input  class="phy-input-styles" type="text" id="posF_POS-IN" name="posF_POS-IN"><br><br>
+                        <label  class="phy-lbl-opts" for="posF_VEL-I">Velocidad Inicial</label>
+                        <input  class="phy-input-styles" type="text" id="posF_VEL-I" name="posF_VEL-I"><br><br>
+                        <label class="phy-lbl-opts" for="posF_VEL-I">Aceleración</label>
+                        <input  class="phy-input-styles" type="text" id="posF_VEL-I" name="posF_VEL-I"><br><br>
+                        <label class="phy-lbl-opts" for="posF_TIME">Tiempo</label>
+                        <input  class="phy-input-styles" type="text" id="posF_TIME" name="posF_TIME"><br><br>
+                         
+                        <input class="phy-btns-styles"  id="calc-posF-btn" type="submit" value="CALCULAR">
+                        <input class="phy-btns-styles" id="posF-reset" type="reset" value="BORRAR">
         
                     </form>
                     <p class="posF-result hide"></p>
