@@ -1,4 +1,7 @@
 
+
+
+
 /****************************************************************************** */
     /*/*=============BARRA DE NAVEGACION Y MENU =============*/
 /****************************************************************************** */
@@ -298,7 +301,7 @@ calculusOp.addEventListener("submit",  function(event){
     event.preventDefault();
    
     let escala1 = parseInt(escala.value);
-    let constante1 = parseInt(constant.value)
+    let constante1 = parseInt(constant.value);
 
     if (constant.value != '' && escala.value != '' ) {
         derivResult.classList.remove('hide');   
@@ -410,11 +413,6 @@ backBtnInt.addEventListener('click', function() {
     }, 0);
 
 });
-
-
-
-
-
 
 
 

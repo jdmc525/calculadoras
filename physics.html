@@ -45,10 +45,12 @@
             
         </section>  
 
+        <!-- onsubmit="mtrcSelector(event)" -->
+
         <section class="phy-main_op-ext-section-cont">
             <div class="phy-main_options-cont">
                 <p class="phy-options_title phy-title-style" >Opciones</p>
-                <form class="phy-main_options-form">
+                <form id="phy-main_options-form" >  
                     <div><label for="phy_mtrc-sys-opt" class="phy-lbl-opts">Sistema Metrico</label></div>
                         <input type="text" id="phy_mtrc-sys-opt" list="mtrc-sys-opts" class="phy-input-styles">
                             <datalist id="mtrc-sys-opts">
@@ -65,13 +67,14 @@
                             </datalist>                                                
                     
                     <div class="phy-options_ok-cont">
-                        <input type="submit" id="phy-options_ok" class="phy-btns-styles">
+                        <input type="submit" id="phy-options_ok" class="phy-btns-styles" value="OK">
                     </div>                        
                 </form>  
             </div>
         
-            <div class="phy-op_external-container ">
-                
+        <div class="phy-op_external-container ">
+            <!-- //Recorder agregar hide -->
+            <div class="phy-pos_external-container hide "> 
                 <div class="operation-posF_container phy-operation-container-stl">
                     <p class="phy-operation_title phy-title-style" >Posicion Final</p>
                     <form id="operation-posF">
@@ -79,8 +82,8 @@
                         <input  class="phy-input-styles" type="text" id="posF_POS-IN" name="posF_POS-IN"><br><br>
                         <label  class="phy-lbl-opts" for="posF_VEL-I">Velocidad Inicial</label>
                         <input  class="phy-input-styles" type="text" id="posF_VEL-I" name="posF_VEL-I"><br><br>
-                        <label class="phy-lbl-opts" for="posF_VEL-I">Aceleración</label>
-                        <input  class="phy-input-styles" type="text" id="posF_VEL-I" name="posF_VEL-I"><br><br>
+                        <label class="phy-lbl-opts" for="posF_ACE">Aceleración</label>
+                        <input  class="phy-input-styles" type="text" id="posF_ACE" name="posF_ACE"><br><br>
                         <label class="phy-lbl-opts" for="posF_TIME">Tiempo</label>
                         <input  class="phy-input-styles" type="text" id="posF_TIME" name="posF_TIME"><br><br>
                          
@@ -88,17 +91,40 @@
                         <input class="phy-btns-styles" id="posF-reset" type="reset" value="BORRAR">
         
                     </form>
-                    <p class="posF-result hide"></p>
+                    <p class="posF-result hide   "></p>
         
                 </div>
+
+
+                <div class="operation-posI_container phy-operation-container-stl">
+                    <p class="phy-operation_title phy-title-style" >Posicion Inicial</p>
+                    <form id="operation-posI">
+                        <label class="phy-lbl-opts"  for="posI_POS-FIN">Posicion Final</label>
+                        <input  class="phy-input-styles" type="text" id="posI_POS-FIN" name="posI_POS-FIN"><br><br>
+                        <label  class="phy-lbl-opts" for="posI_VEL-I">Velocidad Inicial</label>
+                        <input  class="phy-input-styles" type="text" id="posI_VEL-I" name="posI_VEL-I"><br><br>
+                        <label class="phy-lbl-opts" for="posI_ACE">Aceleración</label>
+                        <input  class="phy-input-styles" type="text" id="posI_ACE" name="posI_ACE"><br><br>
+                        <label class="phy-lbl-opts" for="posI_TIME">Tiempo</label>
+                        <input  class="phy-input-styles" type="text" id="posI_TIME" name="posI_TIME"><br><br>
+                         
+                        <input class="phy-btns-styles"  id="calc-posI-btn" type="submit" value="CALCULAR">
+                        <input class="phy-btns-styles" id="posI-reset" type="reset" value="BORRAR">
+        
+                    </form>
+                    <p class="posI-result hide"></p>
+        
+                </div>
+        
+
                 
         
-
-
-                <span><img class="phy-back-btn" src="/icons/back_calculus.png" alt="back-btn"></span>
-        
-        
             </div>
+        
+        </div>
+
+            <!-- <span><img class="phy-back-btn" src="/icons/back_calculus.png" alt="back-btn"></span> -->
+
         </section>
     
     
@@ -107,8 +133,8 @@
     </div>
 
 
-
-<script src="/script.js"></script>
+    <script src="/phy_scrypt.js"></script>
+    <script src="/script.js"></script>
 
 
 </body>

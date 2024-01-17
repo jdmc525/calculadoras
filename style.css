@@ -708,6 +708,7 @@ margin-top: 170px;
 
 .phy-op_external-container {
     width: 100%;
+   
 }
 
 
@@ -728,6 +729,18 @@ margin-top: 170px;
     font-weight: 800;
     border: none;
     margin: 5px 5px 15px 5px ;
+}
+
+
+#phy-options_ok{
+    width: 100px;
+}
+
+#phy-main_options-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -781,6 +794,31 @@ margin-top: 170px;
         width: 500px;
     
     }
+
+
+    .phy-operation-container-stl{
+        background-color: #238837;
+        text-align: center;
+        width: 500px;
+    }
+
+    .phy-op_external-container {
+        margin-bottom: 15xp;
+        width: 500px;
+    }
+
+    .phy-main_options-cont{
+        display: flex;
+        flex-direction: column;
+        background-color: #238837;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 500px;
+        height: 250px;
+    }
+    
+
 }
 
 
