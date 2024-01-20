@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadoras</title>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="icon" href="/icons/favicon_calc.png" type="image/x-icon">
+
     <link rel="stylesheet" href="/style.css">
 
 </head>
@@ -45,12 +47,14 @@
             
         </section>  
 
-        <!-- onsubmit="mtrcSelector(event)" -->
+        <!--=============  SELECCION DE OPERACION ============= -->
 
-        <section class="phy-main_op-ext-section-cont">
+<!-- https://codepen.io/iamsidd_j/pen/qBRWNQQ posible solucion para lo del datalist feo -->
+
+    <section class="phy-main_op-ext-section-cont">
             <div class="phy-main_options-cont">
-                <p class="phy-options_title phy-title-style" >Opciones</p>
-                <form id="phy-main_options-form" >  
+                <p class="phy-options_title phy-title-style" >Opciones</p>    
+                <form id="phy-main_options-form"  >  
                     <div><label for="phy_mtrc-sys-opt" class="phy-lbl-opts">Sistema Metrico</label></div>
                         <input type="text" id="phy_mtrc-sys-opt" list="mtrc-sys-opts" class="phy-input-styles">
                             <datalist id="mtrc-sys-opts">
@@ -72,9 +76,11 @@
                 </form>  
             </div>
         
-        <div class="phy-op_external-container ">
+
+            <!--============= OPERACIONES POSICION ============= -->
+        <div class="phy-op_external-container-POS hide ">
             <!-- //Recorder agregar hide -->
-            <div class="phy-pos_external-container hide "> 
+            <div class="phy-pos_external-container  "> 
                 <div class="operation-posF_container phy-operation-container-stl">
                     <p class="phy-operation_title phy-title-style" >Posicion Final</p>
                     <form id="operation-posF">
@@ -86,12 +92,12 @@
                         <input  class="phy-input-styles" type="text" id="posF_ACE" name="posF_ACE"><br><br>
                         <label class="phy-lbl-opts" for="posF_TIME">Tiempo</label>
                         <input  class="phy-input-styles" type="text" id="posF_TIME" name="posF_TIME"><br><br>
-                         
+
                         <input class="phy-btns-styles"  id="calc-posF-btn" type="submit" value="CALCULAR">
                         <input class="phy-btns-styles" id="posF-reset" type="reset" value="BORRAR">
         
                     </form>
-                    <p class="posF-result hide   "></p>
+                    <p class="posF-result hide phy-result-style  "></p>
         
                 </div>
 
@@ -107,32 +113,92 @@
                         <input  class="phy-input-styles" type="text" id="posI_ACE" name="posI_ACE"><br><br>
                         <label class="phy-lbl-opts" for="posI_TIME">Tiempo</label>
                         <input  class="phy-input-styles" type="text" id="posI_TIME" name="posI_TIME"><br><br>
-                         
+
                         <input class="phy-btns-styles"  id="calc-posI-btn" type="submit" value="CALCULAR">
                         <input class="phy-btns-styles" id="posI-reset" type="reset" value="BORRAR">
         
                     </form>
-                    <p class="posI-result hide"></p>
+                    <p class="posI-result hide phy-result-style"></p>
         
                 </div>
-        
-
-                
-        
             </div>
-        
         </div>
 
-            <!-- <span><img class="phy-back-btn" src="/icons/back_calculus.png" alt="back-btn"></span> -->
 
-        </section>
+        <!--============= OPERACIONES VELOCIDAD ============= -->
+
+            <div class="phy-vel_ext-cont-main hide ">
+                <!-- //Recorder agregar hide -->
+                <div class="phy-vel_ext-cont  "> 
+
+                    <div class="operation-velF_container phy-operation-container-stl">
+                        <p class="phy-title-style" >Velocidad Final</p>
+                        <form id="operation-velF">
+                            <label  class="phy-lbl-opts" for="velF_VEL-I">Velocidad Inicial</label>
+                            <input  class="phy-input-styles" type="text" id="velF_VEL-I" name="velF_VEL-I"><br><br>
+                            <label class="phy-lbl-opts" for="velF_ACE">Aceleración</label>
+                            <input  class="phy-input-styles" type="text" id="velF_ACE" name="velF_ACE"><br><br>
+                            <label class="phy-lbl-opts" for="velF_TIME">Tiempo</label>
+                            <input  class="phy-input-styles" type="text" id="velF_TIME" name="velF_TIME"><br><br>
+
+                            <input class="phy-btns-styles"  id="calc-velF-btn" type="submit" value="CALCULAR">
+                            <input class="phy-btns-styles" id="velF-reset" type="reset" value="BORRAR">
+            
+                        </form>
+                        <p class="velF-result hide phy-result-style  "></p>
+            
+                    </div>
     
-    
-    
-    
-    </div>
+                    <div class="operation-velI_container phy-operation-container-stl">
+                        <p class="phy-title-style" >Velocidad Inicial</p>
+                        <form id="operation-velI">
+                            <label  class="phy-lbl-opts" for="velI_VEL-F">Velocidad Final</label>
+                            <input  class="phy-input-styles" type="text" id="velI_VEL-F" name="velI_VEL-F"><br><br>
+                            <label class="phy-lbl-opts" for="velI_ACE">Aceleración</label>
+                            <input  class="phy-input-styles" type="text" id="velI_ACE" name="velI_ACE"><br><br>
+                            <label class="phy-lbl-opts" for="velI_TIME">Tiempo</label>
+                            <input  class="phy-input-styles" type="text" id="velI_TIME" name="velI_TIME"><br><br>
+
+                            <input class="phy-btns-styles"  id="calc-velI-btn" type="submit" value="CALCULAR">
+                            <input class="phy-btns-styles" id="velI-reset" type="reset" value="BORRAR">
+            
+                        </form>
+                        <p class="velI-result hide phy-result-style  "></p>
+            
+                    </div>
+                </div> 
+            </div>
 
 
+
+            <!--============= OPERACIONES ACELERACION ============= -->
+
+            <div class="phy-ace_ext-cont-main hide   ">
+                <!-- //Recorder agregar hide -->
+                <div class="phy-ace_ext-cont "> 
+
+                    <div class="operation-ace_container phy-operation-container-stl">
+                        <p class="phy-title-style" >Aceleración</p>
+                        <form id="operation-ace">
+                            <label  class="phy-lbl-opts" for="ace_VEL-I">Velocidad Inicial</label>
+                            <input  class="phy-input-styles" type="text" id="ace_VEL-I" name="ace_VEL-I"><br><br>
+                            <label class="phy-lbl-opts" for="ace_VEL-F">Velocidad Final</label>
+                            <input  class="phy-input-styles" type="text" id="ace_VEL-F" name="ace_VEL-F"><br><br>
+                            <label class="phy-lbl-opts" for="ace_TIME">Tiempo</label>
+                            <input  class="phy-input-styles" type="text" id="ace_TIME" name="ace_TIME"><br><br>
+
+                            <input class="phy-btns-styles"  id="calc-ace-btn" type="submit" value="CALCULAR">
+                            <input class="phy-btns-styles" id="ace-reset" type="reset" value="BORRAR">
+            
+                        </form>
+                        <p class="ace-result hide phy-result-style  "></p>
+            
+                    </div>
+                </div>
+            </div>
+
+     </section>
+    
     <script src="/phy_scrypt.js"></script>
     <script src="/script.js"></script>
 
